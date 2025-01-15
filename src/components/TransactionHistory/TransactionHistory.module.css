@@ -1,0 +1,27 @@
+.trHeader {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+.trTable,
+.trTable th,
+.trTable td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+.trTable {
+  max-width: 1500px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+
+  text-transform: capitalize;
+  font-size: 40px;
+
+  margin-bottom: 100px;
+}
+
+.trRow:nth-child(even) {
+  background-color: #d3d3d3;
+}
