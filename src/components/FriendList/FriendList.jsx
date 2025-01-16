@@ -1,5 +1,5 @@
 import css from './FriendList.module.css';
-import clsx from 'clsx';
+import FriendListItem from '../FriendListItem/FriendListItem.jsx';
 
 export default function FriendList({ friends }) {
   return (
@@ -15,17 +15,5 @@ export default function FriendList({ friends }) {
         );
       })}
     </ul>
-  );
-}
-
-function FriendListItem({ avatar, name, isOnline }) {
-  return (
-    <li className={css.card}>
-      <img className={css.avatar} src={avatar} alt={name} />
-      <p className={css.name}>{name}</p>
-      <p className={clsx(css.status, isOnline ? css.online : css.offline)}>
-        {isOnline ? 'online' : 'offline'}
-      </p>
-    </li>
   );
 }

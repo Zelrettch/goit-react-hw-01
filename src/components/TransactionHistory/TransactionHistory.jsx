@@ -11,21 +11,16 @@ export default function TransactionHistory({ items }) {
         </tr>
       </thead>
       <tbody>
-        {items.map(t => {
-          return <Transaction transaction={t} key={t.id} />;
+        {items.map(({ type, amount, currency, id }) => {
+          return (
+            <tr className={css.trRow} key={id}>
+              <td>{type}</td>
+              <td>{amount}</td>
+              <td>{currency}</td>
+            </tr>
+          );
         })}
       </tbody>
     </table>
-  );
-}
-
-function Transaction({ transaction }) {
-  const { type, amount, currency } = transaction;
-  return (
-    <tr className={css.trRow}>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
   );
 }
